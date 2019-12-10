@@ -10,8 +10,8 @@
                 <Setter Property="Maximum" Value="255" />
             </Style>
 
-            <Style TargetType="Label">
-                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Style TargetType="Entry">
+                <Setter Property="Keyboard" Value="Numeric" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -21,21 +21,21 @@
         <BoxView x:Name="boxView"
                  Color="Black"
                  VerticalOptions="FillAndExpand" />
-        <Entry Placeholder="Type here" HorizontalOptions="CenterAndExpand" />
+        
         <Slider x:Name="redSlider"
                 ValueChanged="OnSliderValueChanged" />
+        <Entry x:Name="redEntry" HorizontalOptions="CenterAndExpand" Completed="Entry_Completed" WidthRequest="100" TextChanged="Entry_TextChanged"/>
 
-        <Label x:Name="redLabel" />
 
         <Slider x:Name="greenSlider"
                 ValueChanged="OnSliderValueChanged" />
+        <Entry x:Name="greenEntry" HorizontalOptions="CenterAndExpand" Completed="Entry_Completed" WidthRequest="100" TextChanged="Entry_TextChanged"/>
 
-        <Label x:Name="greenLabel" />
 
         <Slider x:Name="blueSlider"
                 ValueChanged="OnSliderValueChanged" />
+        <Entry x:Name="blueEntry" HorizontalOptions="CenterAndExpand" Completed="Entry_Completed" WidthRequest="100" TextChanged="Entry_TextChanged"/>
 
-        <Label x:Name="blueLabel" />
     </StackLayout>
 </ContentPage>
 
